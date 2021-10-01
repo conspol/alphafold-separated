@@ -14,4 +14,4 @@ The syntax to run the containers is the same as in the original AlphaFold 2. \
 If the prediction is faster than the feature preparation and the `features.pkl` is missing, 
 the `af2_features` container will create `features.pkl` file by itself. In contrast to 
 the vanilla behaviour, it will create the file before the features are calculated, so `af2_features`
-is not going to try to process the same features https://github.com/chshr/alphafold-separated.gitagain.
+is not going to try to process the same features again.
