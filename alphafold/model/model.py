@@ -77,7 +77,7 @@ class RunModel:
       random_seed: A random seed to use to initialize the parameters if none
         were set when this class was initialized.
     """
-    if not self.params
+    if not self.params:
       # Init params randomly.
       rng = jax.random.PRNGKey(random_seed)
       self.params = hk.data_structures.to_mutable_dict(

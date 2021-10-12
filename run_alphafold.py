@@ -133,14 +133,14 @@ def predict_structure(
 
   else:
       with open(features_output_path, 'a'):
-    os.utime(features_output_path, None)
-    feature_dict = data_pipeline.process(
-        input_fasta_path=fasta_path,
-        msa_output_dir=msa_output_dir)
+        os.utime(features_output_path, None)
+        feature_dict = data_pipeline.process(
+            input_fasta_path=fasta_path,
+            msa_output_dir=msa_output_dir)
 
     # Write out features as a pickled dictionary.
-    with open(features_output_path, 'wb') as f:
-      pickle.dump(feature_dict, f, protocol=4)
+      with open(features_output_path, 'wb') as f:
+        pickle.dump(feature_dict, f, protocol=4)
 
   timings['features'] = time.time() - t_0
 
